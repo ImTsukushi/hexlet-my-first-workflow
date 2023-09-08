@@ -1,12 +1,15 @@
 name: hello-world-check
-
+ 
 on: push
+ 
 jobs:
   build:
     runs-on: ubuntu-latest
+ 
     steps:
-      -name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout кода
+        uses: actions/checkout@v3
+ 
+      - name: Запустить команду make say-hello
+        run: make say-hello
 
-      -name: run say-hello
-      run: make say-hello
